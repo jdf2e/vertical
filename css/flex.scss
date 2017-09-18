@@ -1,0 +1,216 @@
+body{
+	background: #fff;
+	padding-top: 50px;
+	padding-bottom: 500px;
+	font-size: 16px;
+	.main{
+		width: 900px;
+		padding-bottom: 50px;
+		margin: 0 auto;
+		.title{
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+		.next-btn{
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background: #D64957;
+			color: #fff;
+			font-weight: bold;
+			float: right;
+		}
+		.pre-btn{
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background: #D64957;
+			color: #fff;
+			font-weight: bold;
+			float: left;
+		}
+		.box{
+			width: 900px;
+			padding-top: 0px;
+			padding-bottom: 50px;
+			background: #eee;
+			margin-bottom: 50px;
+			.box-btns{
+				margin: 0 auto;
+				width: 650px;
+				height: 100px;
+				.btns{
+					width: 300px;
+					height: 60px;
+					line-height: 60px;
+					text-align: center;
+					background: #ccc;
+					color: red;
+				}	
+			}
+			h1{
+				height: 50px;
+				line-height: 50px;
+				background: #B4E9EA;
+				font-size: 18px;
+			}
+			.outer{
+				width: 898px;
+				height: 200px;
+				border: 1px solid red;
+				.inner{
+					border:1px dashed red;
+				}
+			}
+			.tips{
+				a{
+					color: blue;
+				}
+			}
+			.outer-1{
+				display: flex;
+			    align-items:center;
+			    /*height: auto;
+			    padding: 50px 0px;*/
+			    .inner{
+			    	width: 200px;
+			    }
+			}
+			.outer-2{
+				display: -webkit-box; 
+				display: -moz-box; 
+				display: -ms-flexbox; 
+				display: -webkit-flex; 
+				display: flex;
+			    align-items:center;
+			    .inner21{
+			    	height: 50px;
+			    }
+			    .inner22{
+			    	height: 100px;
+			    }
+			    .inner23{
+			    	height: 80px;
+			    }
+			}
+			.outer-3{
+				display: flex;
+			    align-items:center;/*次轴方向居中*/
+			    justify-content:center;/*主轴方向居中*/
+			    flex-direction:column;/*垂直方向作为主轴*/
+			    .inner{
+			    	padding: 10px
+			    }
+			}
+			.outer-4{
+				display: flex;
+				.left-box{
+					flex: 1;
+					height: 100px;
+					background: yellow;
+					display: flex;
+			    	align-items:center;/*次轴方向居中*/
+			    	justify-content:center;/*主轴方向居中*/
+			    	flex-direction:column;/*垂直方向作为主轴*/
+					p{
+						line-height: 20px;
+						border: 1px dashed green;
+					}
+				}
+				.right-box{
+					width: 200px;
+					height: 100px;
+					background: orange;
+					display: flex;
+					align-items:center;/*次轴方向居中*/
+			    	justify-content:center;/*主轴方向居中*/
+			    	flex-direction:row;/*垂直方向作为主轴*/
+					span{
+						flex: 2;
+						text-align: right;
+					}
+					b{
+						flex: 1;
+						text-align: left;
+					}
+				}
+			}
+			.outer-5{
+				display: flex;
+				height: auto;
+				padding: 0px 0px;
+				.left-box{
+					flex: 1;
+					padding: 20px 0px;
+					background: yellow;
+					display: flex;
+			    	align-items:center;/*次轴方向居中*/
+			    	justify-content:center;/*主轴方向居中*/
+			    	flex-direction:column;/*垂直方向作为主轴*/
+					p{
+						height: 20px;
+						border: 1px dashed green;
+					}
+				}
+				.right-box{
+					width: 200px;
+					background: orange;
+					display: flex;
+					align-items:center;/*次轴方向居中*/
+			    	justify-content:center;/*主轴方向居中*/
+			    	flex-direction:row;/*垂直方向作为主轴*/
+					span{
+						flex: 2;
+						text-align: right;
+					}
+					b{
+						flex: 1;
+						text-align: left;
+					}
+				}
+			}
+			.outer-6{
+				.inner{
+					width: 200px;
+					height: 50px;
+					margin: 20px;
+					display: flex;
+					font-size: 12px;
+					label{
+						flex: 1;
+						display: flex;
+						align-items:center;/*次轴方向居中*/
+			    		justify-content:center;/*主轴方向居中*/
+			    		input{
+			    			margin: 0px;
+			    		}
+					}
+				}
+			}
+			.outer-7{
+				height: auto;
+				border: 0;
+				.inner{
+					width: 100%;
+					height: 250px;
+					margin: 20px;
+					border: 0;
+					h2{
+						height: 30px;
+						line-height: 30px;
+					}
+					ol{
+						li{
+							height: 25px;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

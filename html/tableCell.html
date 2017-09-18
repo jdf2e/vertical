@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content="" />
+<title>tableCell定位</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table-cell.css">
+</head>
+<body>
+<div class="main">
+	<h1 class="title">tableCell垂直居中总结</h1>
+	<div class="box">
+		<h1>四种情况组合</h1>
+		<div class="box-btns">
+			<button class="btns">1、父元素固定高度</button>
+			<button class="btns">2、子元素固定高度</button>
+			<button class="btns">3、父元素自适应高度</button>
+			<button class="btns">4、子元素自适应高度</button>
+		</div>
+	</div>
+	<div class="box">
+		<h1><b>table-cell特点：</b></h1>
+		<div class="outers">
+			<ol class="ol-inner">
+				<li>1:同行等高。</li>
+				<li>2:宽度自动调节。</li>
+				<li>3:table-cell：支持IE8以上</li>
+			</ol>
+		</div>
+	</div>
+	<div class="box">
+		<h1><b>table-cell使用方法：</b></h1>
+		<div class="outers">
+			<ol class="ol-inner">
+				<li>1:父元素设置display: table-cell;vertical-align: middle;</li>
+				<li>2:子元素设置display: inline-block;vertical-align: middle;。</li>
+			</ol>
+		</div>
+		<p></p>
+	</div>
+	<div class="box">
+		<h1><b>方法1：</b>大小不固定/固定单个子元素（父元素高度固定）的垂直居中布局（组合：1-2、1-4）</h1>
+		<div class="outer outer2">
+			<div class="inner">
+				<div class="box-2">
+					<p>我是内部文字</p>
+					<p>我是内部文字</p>
+					<p>我是内部文字</p>
+				</div>
+			</div>
+		</div>
+		<span class="tips">inner元素可以设置高度或者padding自适应高度</p>
+	</div>
+	
+
+	<div class="box">
+		<h1><b>方法2：</b>大小固定元素的垂直居中布局（父元素高度自适应）（组合：3-2）</h1>
+		<div class="outer outer3">
+			<div class="inner">
+				<div class="box-3 box31"></div>
+				<div class="box-3 box32"></div>
+				<div class="box-3 box33"></div>
+				<div class="box-3 box34"></div>
+			</div>
+		</div>
+		<span class="tips"></span>
+		<p>table-cell：IE6、7不支持</p>
+	</div>
+
+	<div class="box">
+		<h1><b>方法3：</b>大小不固定元素的垂直居中布局（父元素高度自适应）（组合：3-4）</h1>
+		<div class="outer outer4">
+			<div class="inner">
+				<div class="box-4 box41"></div>
+				<div class="box-4 box42"></div>
+				<div class="box-4 box43"></div>
+				<div class="box-4 box44"></div>
+			</div>
+		</div>
+		<span class="tips"></span>
+		<p>table-cell：IE6、7不支持</p>
+	</div>
+
+	<div class="box">
+		<h1><b>方法4：</b>使用table-cell两列自适应布局</h1>
+		<div class="outer outer1">
+			<div class="left-box table-box">壬戌之秋，七月既望，苏子与客泛舟游于赤壁之下。清风徐来，水波不兴。举酒属客，诵明月之诗，歌窈窕之章。少焉，月出于东山之上而和之。</div>
+			<div class="right-box table-box">我和左边等高</div>
+		</div>
+		<span class="tips">display:table-cell 元素生成的匿名table默认table-layout:auto。宽度将基于单元格内容自动调整。所以设置width:1000px的用途是尽可能的宽的意思。这样就可以达到自适应的效果。</span>
+		<p>table-cell：IE6、7不支持</p>
+	</div>
+	<div>
+		<img src="../css/i/pic_1.png">
+	</div>
+	<div class="box">
+		<h1><b>方法5：</b>使用table-cell多列自适应布局</h1>
+		<div class="outer outer41">
+			<div class="box1 boxs">
+				<div class="img-box">假如我是一张图</div>
+			</div>
+			<div class="box2 boxs">
+				<span class="erp">
+					<p>ERP:xxx</p>
+					<p>ERP:xxx</p>
+					<p>ERP:xxx</p>
+				</span>
+			</div>
+			<div class="box3 boxs"><span>北京职场交换</span></div>
+		</div>
+		<span class="tips">中间这列高度自适应，其他两个随之联动。这个方法兼容性不错，但是table-cell：IE6、7不支持</span>
+		<p></p>
+	</div>
+
+	<div class="box">
+		<h1><b>方法6：</b>使用float浮动和table-cell布局</h1>
+		<div class="outer outer11">
+			<div class="left">
+				<div class="inner">
+					<p>我是内部文字</p>
+					<p>我是内部文字</p>
+					<p>我是内部文字</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="inner">
+					<div class="inner-box">
+						<p>我是内部文字</p>
+						<p>我是内部文字</p>
+						<p>我是内部文字</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clr"></div>
+		<span class="tips">为了实现float下也能垂直居中，需要加一层标签,对比左侧，使用了table-cell的标签不能使用float属性</span>
+	</div>
+	<div class="box">
+		<h1><b>方法7：</b>给label标签设置table-cell属性</h1>
+		<div class="outer outer12">
+			<div class="inner">
+				<label class="radio-box">
+					<input type="radio" name="fruit">
+					<span>香蕉</span>
+				</label>
+				<label class="radio-box">
+					<input type="radio" name="fruit">
+					<span>苹果</span>
+				</label>
+				<label class="radio-box">
+					<input type="radio" name="fruit">
+					<span>鸭梨</span>
+				</label>
+			</div>
+		</div>
+		<span class="tips">
+		</span>
+	</div>
+	<div class="box">
+		<h1><b>方法8：</b>使用table-cell垂直居中,inner高度不固定</h1>
+		<div class="outer outer13">
+			<div class="inner">
+				<label class="radio-box">
+					<input type="radio" name="fruit2">
+					<span>香蕉</span>
+				</label>
+				<label class="radio-box">
+					<input type="radio" name="fruit2">
+					<span>苹果</span>
+				</label>
+				<label class="radio-box">
+					<input type="radio" name="fruit2">
+					<span>鸭梨</span>
+				</label>
+			</div>
+		</div>
+		<span class="tips">
+			<ul>
+				<li>1.label标签包裹input和span标签，给其设置table-cell属性，内部元素居中对齐；</li>
+				<li>2.label标签的父元素高度不固定，设置padding撑开；</li>
+				<li>3.表单radio和checkbox都有默认的margin；</li>
+			</ul>
+		</span>
+	</div>
+	<div class="box">
+		<h1><b>方法9：</b>使用table-cell垂直居中,inner高度固定</h1>
+		<div class="outer outer14">
+			<div class="inner">
+				<label class="radio-box">
+					<input type="radio" name="fruit2">
+					<span>香蕉</span>
+				</label>
+				<label class="radio-box">
+					<input type="radio" name="fruit2">
+					<span>苹果</span>
+				</label>
+				<label class="radio-box">
+					<input type="radio" name="fruit2">
+					<span>鸭梨</span>
+				</label>
+			</div>
+		</div>
+		<span class="tips">
+			<ul>
+				<li>外层高度固定，可以嵌套两层table-cell处理两层垂直居中</li>
+			</ul>
+		</span>
+	</div>
+	<div class="box">
+		<h1>总结：vertical-align</h1>
+		<div class="outer outer6">
+			<ul class="summary">
+				<li>1:父元素有固定高度/自适应时，子元素有固定高度/自适应：父元素设置display: table-cell;vertical-align: middle;，同时子元素设置vertical-align和inline-block；</li>
+				<li>2:可以根据同行等高、宽度自动调节来设置自适应多列布局</li>
+				<li>3:table-cell同样会被其他一些CSS属性破坏，例如float, position:absolute，所以，在使用display:table-cell与float:left或是position:absolute属性尽量不用同用。设置了display:table-cell的元素对宽度高度敏感，对margin值无反应，响应padding属性.</li>
+				<li>4:兼容性：table-cell：支持IE8以上</li>
+			</ul>
+		</div>
+	</div>
+<a href="./index.html"><button class="pre-btn">上一页</button></a>
+<a href="./vertical.html"><button class="next-btn">下一页</button></a>
+
+
+</div>
+</body>
+</html>

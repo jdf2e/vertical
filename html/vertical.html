@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content="" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/vertical.css">
+
+</head>
+<body>
+<div class="main">
+	<h1 class="title">vertical-align垂直居中总结</h1>
+	<div class="box">
+		<h1>四种情况组合</h1>
+		<div class="box-btns">
+			<button class="btns">1、父元素固定高度</button>
+			<button class="btns">2、子元素固定高度</button>
+			<button class="btns">3、父元素自适应高度</button>
+			<button class="btns">4、子元素自适应高度</button>
+		</div>
+	</div>
+	<div class="box">
+		<h1>例子1:父元素有height，没有设置padding（组合：1-2）</h1>
+		<div class="outer outer1">
+			<div class="inner">我是内部文字</div>
+		</div>
+		<span class="tips">父元素设置高度等于行高，子元素设置为vertical-align:middle</span>
+	</div>
+	<div class="box">
+		<h1>例子2:父元素没有固定height，设置padding（组合：3-2）</h1>
+		<div class="outer outer1_1">
+			<div class="inner">我是内部文字</div>
+		</div>
+		<span class="tips">父元素设置padding，子元素设置为vertical-align:middle</span>
+	</div>
+	<div class="box">
+		<h1>例子3:多个固定高度子元素垂直居中（组合：1-2、3-2）</h1>
+		<div class="outer outer2">
+			<div class="inner inner21">我是内部文字</div>
+			<div class="inner inner22">我是内部文字</div>
+			<div class="inner inner23">我是内部文字</div>
+		</div>
+		<span class="tips">黄色区域高度固定,父元素高度(line-height)固定或者自适应（padding注释）</span>
+	</div>
+	<div class="box">
+		<h1>例子4:多个自适应高度子元素垂直居中组合：1-4、3-4）</h1>
+		<div class="outer outer3">
+			<div class="inner inner31">
+				<p>我是内部文字</p>
+				<p>我是内部文字</p>
+			</div>
+			<div class="inner inner32">
+				<p>我是内部文字</p>
+				<p>我是内部文字</p>
+				<p>我是内部文字</p>
+				<p>我是内部文字</p>
+			</div>
+			<div class="inner inner33">
+				<p>我是内部文字</p>
+			</div>
+		</div>
+		<span class="tips">
+			1.红框父元素高度不固定、内部元素高度不固定<br/>
+			2.父元素高度固定有行高时，内部元素也要设置行高
+		</span>
+	</div>
+	<div class="box">
+		<h1>例子5:vertical-align支持在有浮动的情况下垂直居中</h1>
+		<div class="outer outer4">
+			<div class="left-part">
+				<ul class="left-tap">
+					<li>内部文字1</li>
+					<li>内部文字2</li>
+					<li>内部文字3</li>
+					<li>内部文字3</li>
+				</ul>
+			</div>
+			<div class="right-part">
+				<span>右侧内容</span>
+				<b>>></b>
+			</div>
+		</div>
+		<span class="tips">float不会影响vertical-align（这种情况下一般不支持左右两列高度联动，因此适应于高度固定情况）</span>
+	</div>
+	<div class="box">
+		<h1>例子6</h1>
+		<div class="outer outer5">
+			<div class="inner">
+				<label>
+					<input type="radio" name="ceshi">
+					<span>香蕉</span>
+				</label>
+				<label>
+					<input type="radio" name="ceshi">
+					<span>苹果</span>
+				</label>
+				<label>
+					<input type="radio" name="ceshi">
+					<span>橘子</span>
+				</label>
+			</div>
+		</div>
+		<span class="tips">父元素无固定高度时，父元素设置padding（或不设置）,span和input设置vertical-align和inline-block</span>
+	</div>
+	<div class="box">
+		<h1>总结：vertical-align</h1>
+		<div class="outer outer6">
+			<ul class="summary">
+				<li>1:父元素有固定高度时，父元素设置height、line-height，同时子元素设置vertical-align和inline-block；</li>
+				<li>2:父元素无固定高度时，父元素设置padding（或不设置），同时子元素设置vertical-align和inline-block；</li>
+				<li>3:左右浮动布局，不影响vertical—align布局；</li>
+				<li>4:自适应一般要加上padding属性扩展高度；</li>
+				<li>5:vertical-align：支持IE8以上</li>
+			</ul>
+		</div>
+	</div>
+	<a href="./tableCell.html"><button class="pre-btn">上一页</button></a>
+	<a href="./position.html"><button class="next-btn">下一页</button></a>
+</div>
+
+</body>
+</html>

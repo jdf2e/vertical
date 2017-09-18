@@ -1,0 +1,264 @@
+body{
+	background: #fff;
+	padding-top: 50px;
+	padding-bottom: 500px;
+	font-size: 16px;
+	.main{
+		width: 900px;
+		padding-bottom: 50px;
+		margin: 0 auto;
+		.next-btn{
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background: #D64957;
+			color: #fff;
+			font-weight: bold;
+			float: right;
+		}
+		.pre-btn{
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background: #D64957;
+			color: #fff;
+			font-weight: bold;
+			float: left;
+		}
+		.title{
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+		.box{
+			width: 900px;
+			padding-top: 0px;
+			padding-bottom: 50px;
+			background: #eee;
+			margin-bottom: 50px;
+			h1{
+				height: 50px;
+				line-height: 50px;
+				background: #B4E9EA;
+				font-size: 18px;
+			}
+			.tips{
+				a{
+					color: blue;
+				}
+				b{
+					color: green;
+					background: pink;
+				}
+			}
+			.red{
+				color: red;
+				font-size: 16px;
+			}
+			.outer{
+				width: 898px;
+				height: 200px;
+				border: 1px solid red;
+				.inner{
+					border:1px dashed red;
+				}
+			}
+			.outer1{
+				.inner{
+					width: 100px;
+					height: 100px;
+					line-height: 100px;
+					color: #fff;
+					background: green;
+					
+				}
+			}
+			.outer2{
+				.inner{
+					width: 100px;
+					padding: 50px;
+					color: #fff;
+					background: green;
+					p{
+						background: yellow;
+						color: red;
+					}
+				}
+			}
+			.outer3{
+				.inner{
+					width: 200px;
+					color: #fff;
+					background: green;
+					//height: 200px;
+					p{
+						background: yellow;
+						color: red;
+						margin: 50px 0px;
+					}
+				}
+			}
+			.outer4{
+				.inner{
+					width: 200px;
+					color: #fff;
+					background: green;
+					border-top:0px;
+					//height: 200px;
+					p{
+						background: yellow;
+						color: red;
+						margin: 50px 0px;
+					}
+				}
+			}
+			.outer5{
+				.inner{
+					width: 200px;
+					color: #fff;
+					background: green;
+					
+					padding: 50px 0px;
+					p{
+						background: yellow;
+						color: red;
+						display: inline-block;
+					}
+				}
+			}
+			.outer11{
+				line-height: 200px;
+				.inner{
+					width: 100px;
+					height: 100px;
+					line-height: 100px;
+					color: #fff;
+					background: green;
+					vertical-align: middle;
+				}
+			}
+			.outer12{
+				height: auto;
+				padding: 50px 0px;
+				.inner{
+					color: red;
+					background: yellow;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.inner21{
+					width: 100px;
+					height: 100px;
+				}
+				.inner22{
+					width: 150px;
+					height: 150px;
+				}
+				.inner23{
+					width: 60px;
+					height: 60px;
+				}
+			}
+			.outer13{
+				.inner{
+					.box-3{
+						border: 1px solid green;
+						margin-right: 10px;
+						display: table-cell;
+						vertical-align: middle;
+						p{
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+					.box31{
+						width: 100px;
+						height: 100px;
+					}
+					.box32{
+						width: 150px;
+						height: 150px;
+					}
+					.box33{
+						width: 50px;
+						height: 50px;
+					}
+					.box34{
+						width: 120px;
+						height: 120px;
+					}
+				}
+			}
+			.outer14{
+				.left-part{
+					float: left;
+					width: 60%;
+					height: 120px;
+					background: green;
+					display: table-cell;
+					vertical-align: middle;
+						.left-tap{
+							border: 1px solid yellow;
+							vertical-align: middle;
+							display: inline-block;
+							li{
+								width: 100px;
+								height: 16px;
+								line-height: 16px;
+								color: #fff;
+							}
+						}
+
+
+				}
+				.right-part{
+					float: left;
+					width: 40%;
+					background: orange;
+					height: 120px;
+					display: table-cell;
+					vertical-align: middle;
+					span,b{
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					
+				}
+			}
+			.outer15{
+				.inner{
+					height: 50px;
+					line-height: 50px;
+					label{
+						input,span{
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+			.outer16{
+				.inner{
+					display: table-cell;
+					vertical-align: middle;
+					label{
+						input,span{
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+
+			
+		}
+
+	}
+}
+.hidden{
+	display: none;
+}

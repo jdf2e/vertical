@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content="" />
+<title>flex布局</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/flex.css">
+
+</head>
+<body>
+<div class="main">
+<h1 class="title">flex垂直居中总结</h1>
+<div class="box">
+	<h1>四种情况组合</h1>
+	<div class="box-btns">
+		<button class="btns">1、父元素固定高度</button>
+		<button class="btns">2、子元素固定高度</button>
+		<button class="btns">3、父元素自适应高度</button>
+		<button class="btns">4、子元素自适应高度</button>
+	</div>
+</div>
+<div class="box">
+	<h1>1.使用flex布局，设置单个元素垂直居中（1234任意组合）</h1>
+	<div class="outer outer-1">
+		<div class="inner">我是内部文字我要垂直居中</div>
+	</div>
+	<span class="tips">使用方法：父元素设置display:flex;（默认水平轴为主轴）align-items: center;(次轴方向居中)
+	<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">flex布局链接</a></span>
+</div>
+
+<div class="box">
+	<h1>2.使用flex布局，设置多个元素垂直居中（1234任意组合）</h1>
+	<div class="outer outer-2">
+		<div class="inner inner21">我是内部文字我要垂直居中</div>
+		<div class="inner inner22">我是内部文字我要垂直居中</div>
+		<div class="inner inner23">我是内部文字我要垂直居中</div>
+	</div>
+	<span class="tips"></span>
+</div>
+
+
+<div class="box">
+	<h1>3.改变主轴方向</h1>
+	<div class="outer outer-3">
+		<div class="inner">我是内部文字我要垂直居中</div>
+		<div class="inner">我是内部文字我要垂直居中</div>
+		<div class="inner">我是内部文字我要垂直居中</div>
+	</div>
+	<span class="tips">垂直方向为主轴，设置次轴也就是水平方向居中</span>
+</div>
+
+
+
+<div class="box">
+	<h1>4.flex设置两列高度固定，宽度自适应布局</h1>
+	<div class="outer outer-4">
+		<div class="left-box">
+			<p>左侧内容1<br/>左侧内容1<br/>左侧内容1</p>
+		</div>
+		<div class="right-box">
+			<span>右侧内容</span>
+			<b>>></b>
+		</div>	
+	</div>
+	<span class="tips"></span>
+</div>
+
+
+<div class="box">
+	<h1>5.flex设置宽度/高度---自适应布局</h1>
+	<div class="outer outer-5">
+		<div class="left-box">
+			<p>左侧内容1</p>
+			<p>左侧内容1</p>
+			<p>左侧内容1</p>
+			<p>左侧内容1</p>
+		</div>
+		<div class="right-box">
+			<span>右侧内容</span>
+			<b>>></b>
+		</div>	
+	</div>
+	<span class="tips"></span>
+</div>
+
+<div class="box">
+	<h1></h1>
+	<div class="outer outer-6">
+		<div class="inner">
+			<label>
+				<input type="radio" name="ceshi">
+				<span>香蕉</span>
+			</label>
+			<label>
+				<input type="radio" name="ceshi">
+				<span>苹果</span>
+			</label>
+			<label>
+				<input type="radio" name="ceshi">
+				<span>橘子</span>
+			</label>
+		</div>	
+	</div>
+	<span class="tips"></span>
+</div>
+<div class="box">
+	<h1>总结：</h1>
+	<div class="outer outer-7">
+		<div class="inner">
+		
+			<ol>
+				<li>1.父元素设置为display: flex;</li>
+				<li>2.子元素设置flex-grow:占空白位置的宽度比例</li>
+				<li>3.父元素设置flex-direction为主轴方向</li>
+				<li>4.父元素设置align-items次轴位置</li>
+				<li>5.父元素设置justify-content主轴位置</li>
+				<li>6.-webkit-box 是 -webkit-flex 的旧写法,正确的css覆盖 顺序是<br/>
+				display: -webkit-box;<br/>
+				display: -webkit-flex;<br/>
+				display: -ms-flexbox;<br/>
+				display: flex;<br/>
+				</li>
+			</ol>
+		</div>	
+	</div>
+	<span class="tips"></span>
+</div>
+	<a href="./position.html"><button class="pre-btn">上一页</button></a>
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content="" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+</head>
+<body>
+<div class="main">
+	<h1 class="title">垂直居中总结</h1>
+	<div class="box">
+		<h1>常用方法1：height与line-height</h1>
+		<div class="outer outer1">
+			<div class="inner">我是内部文字</div>
+		</div>
+		<span class="tips">适用于父元素高度一定</span>
+	</div>
+	<div class="box">
+		<h1>常用方法2：padding</h1>
+		<div class="outer outer2">
+			<div class="inner">
+				<p>我是内部文字</p>
+				<p>我是内部文字</p>
+			</div>
+		</div>
+		<span class="tips">适用于父元素高度不固定</span>
+	</div>
+	<div class="box">
+		<h1>常用方法3：margin</h1>
+		<div class="outer outer3">
+			<div class="inner">
+				<p>
+					我是内部文字</br>
+					我是内部文字</br>
+				</p>
+			</div>
+		</div>
+		<span class="tips">适用于父元素高度不固定</span>
+	</div>
+	<div class="box">
+		<h1>常用方法4：margin</h1>
+		<div class="outer outer4">
+			<div class="inner">
+				<p>
+					我是内部文字</br>
+					我是内部文字</br>
+				</p>
+			</div>
+		</div>
+		<span class="tips red">父元素没有边框:<a href="http://www.w3school.com.cn/css/css_margin_collapsing.asp" target="_blank">垂直外边距合并问题</a><br/>
+		1: 子元素上移到父元素边框位置处；<br/>
+		2: 父元素与外面的包裹的div的margin-top由规定的0px，变为50px；<br/>
+
+		</span>
+	</div>
+
+	<div class="box">
+		<h1>常用方法5：padding</h1>
+		<div class="outer outer5">
+			<div class="inner">
+				<span>我是左侧文字</span>
+				<p>
+					我是内部文字</br>
+					我是内部文字</br>
+					我是内部文字</br>
+				</p>
+			</div>
+		</div>
+		<span class="tips red">
+			多个元素高度不同、不固定，导致不能仅仅使用padding和margin处理
+		<br/>
+		</span>
+	</div>
+	<h1 class="title">错误例子</h1>
+	<div class="box">
+		<h1>错误1：vertical—align:middle不起作用</h1>
+		<div class="outer outer11">
+			<div class="inner">我是内部文字</div>
+		</div>
+		<span class="tips">父元素设置高度等于行高，子元素设置为vertical-align:middle;</span>
+		<div class="hidden">vertical—align:middle只对inline-block起作用</div>
+	</div>
+	<div class="box">
+		<h1><b>错误2：</b>大小固定元素的垂直居中布局</h1>
+		<div class="outer outer13">
+			<div class="inner">
+				<div class="box-3 box31"></div>
+				<div class="box-3 box32"></div>
+				<div class="box-3 box33"></div>
+				<div class="box-3 box34"></div>
+			</div>
+		</div>
+		<span class="tips"></span>
+		<p>设置了display:table-cell的元素对宽度高度敏感，对margin值无反应,明明规定了box的高度，没有起作用</p>
+	</div>
+
+	<div class="box">
+		<h1><b>错误3：</b>使用table-cell不起作用</h1>
+		<div class="outer outer14">
+			<div class="left-part">
+				<ul class="left-tap">
+					<li>内部文字1</li>
+					<li>内部文字2</li>
+					<li>内部文字3</li>
+					<li>内部文字3</li>
+				</ul>
+			</div>
+			<div class="right-part">
+				<span>右侧内容</span>
+				<b>>></b>
+			</div>
+		</div>
+		<span class="tips">使用table-cell不起作用</span>
+	</div>
+	<div class="box">
+		<h1></h1>
+		<div class="outer outer15">
+			<div class="inner">
+				<label>
+					<input type="radio" name="ceshi">
+					<span>香蕉</span>
+				</label>
+				<label>
+					<input type="radio" name="ceshi">
+					<span>苹果</span>
+				</label>
+				<label>
+					<input type="radio" name="ceshi">
+					<span>橘子</span>
+				</label>
+			</div>
+		</div>
+		<span class="tips">使用vertical-align,radio无论怎么设置总是不会与文字对齐</span>
+	</div>
+	<div class="box">
+		<h1></h1>
+		<div class="outer outer16">
+			<div class="inner">
+				<label>
+					<input type="radio" name="ceshi">
+					<span>香蕉</span>
+				</label>
+				<label>
+					<input type="radio" name="ceshi">
+					<span>苹果</span>
+				</label>
+				<label>
+					<input type="radio" name="ceshi">
+					<span>橘子</span>
+				</label>
+			</div>
+		</div>
+		<span class="tips">使用tabel-cell,radio无论怎么设置总是不会与文字对齐</span>
+	</div>
+	<a href="./tableCell.html"><button class="next-btn">下一页</button></a>
+</div>
+
+</body>
+</html>
